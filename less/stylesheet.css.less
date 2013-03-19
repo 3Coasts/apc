@@ -1,0 +1,267 @@
+@import 'font-awesome.less';
+@import 'mixins.less';
+
+/*
+@media (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 979px) {}
+@media (min-width: 1200px) {}
+@media print {}
+*/
+
+body{
+	padding-top:0px;
+	background-image:url('../img/header-bkgd.png');
+	color:#333333;
+	a{
+		color:@orange;
+		text-decoration: none;
+		&:hover{
+			color:#999;
+		}
+	}
+
+}
+
+#page-header{
+	color:#fff;
+	text-transform: uppercase;
+	padding-top:30px;
+
+	h2{
+		font-size:24px;
+		line-height: 26px;
+		background-size:90%;
+	}
+	
+	.region-header{
+		min-height:140px;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	#site-name{
+		a{
+			display: block;
+			background-image:url('../img/logo.png');
+			background-position: top center;
+			background-repeat: no-repeat;
+			text-indent: -2000px;
+			width:100%;
+			height:179px;
+			margin-bottom:20px;
+			@media (min-width: 768px) and (max-width: 979px) {
+				background-size:100%;
+			}
+		}
+	}
+
+}
+
+
+
+#page-content{
+	background-image:url('../img/content-bkgd.png');
+	font-size:12px;
+	> .inside{
+		padding:10px;
+		background-image:url('../img/content-inside-bkgd.png');
+		background-repeat:repeat-y;
+		background-position: top center;
+		@media (min-width: 768px) {
+			padding:20px 0px;
+		}
+		@media(min-width:1200px) { 
+			background-size:1220px 1px; 
+		}
+	}
+	h1{ font-size:38px; }
+	h2{ font-size:24px; line-height: 26px; }
+	h3{ font-size: 18px; line-height: 20px; }
+	h4{ font-size: 14px; line-height: 16px; color:#666; }
+	h5{ font-size: 12px; line-height: 14px; }
+	blockquote p{ font-size:12px; }
+
+	.btn{
+		.button;
+	}
+
+	hr {
+		background-image:url('../img/hr-bkgd.png');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		border-top:5px solid @orange;
+		height:12px;
+		margin:30px 0 20px;
+		clear:both;
+	}
+
+	.panel-separator{
+		.clearfix;
+	}
+
+}
+
+#page-footer{
+	margin-top:20px;
+	color:#fff;
+	font-size:12px;
+	a{
+		color:@orange;
+	}
+	a.btn{
+		.button;
+	}
+	h2{
+		font-size:20px;
+		line-height: 22px;
+	}
+}
+
+
+ul.nav-primary{
+	margin-bottom:0px;
+	li{
+		a{
+			display: block;
+			color: #fff;
+			background-color:@orange;
+			text-shadow: 1px 1px 2px @orange-drop-shadow;
+			font-size: 12px;
+			line-height: 12px;
+			padding: 15px 10px;
+			margin-left: 2px;
+			&:hover{
+				color: @orange;
+				background-color:#e9e9e9;
+				text-shadow: 1px 1px 2px #fff;
+			}
+		}
+	}
+	&.nav-top{
+		display:block;
+		@media (max-width: 767px) { display:none; }
+		li{
+			float:left;
+			a{
+
+			}
+		}
+	}
+
+	&.nav-bottom{
+		display: none;
+		@media (max-width: 768px){ display: block; }
+		li{
+			margin-top:10px;
+			a{
+				margin-left:0px;
+			}
+		}
+
+	}
+}
+
+
+
+.mobile-menu-btn{
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	a{
+		color:#fff;
+		background-color:@orange;
+		padding: 7px;
+		display: none;
+		text-decoration: none;
+		@media (max-width: 767px) { display: block; }
+		&:hover{
+			background-color: #fff;
+			color: @orange;
+		}
+	}
+}
+
+
+.slideshow{
+	position: relative;
+	.clearfix;
+	> ul{
+		margin:0;
+		position: relative;
+		width: 100%;
+		float:left;
+		li{
+			width: 100%;
+			float: left;
+			margin-right: -100%;
+			list-style: none;
+			a{
+				&:hover{
+
+				}
+			}
+			&.first a{
+			}
+			&.last a{
+			}
+			img{
+				max-width:100%;
+			}
+		}
+	}
+	div.gallery_changer{
+		position:absolute;
+    	z-index:10;
+    	bottom:20px;
+    	left:20px;
+		ul{
+			margin:0;
+			li{
+				float:left;
+				a{
+					display:block;
+					text-indent:-2000px;
+					background-color:#fff;
+					width:14px;
+					height:14px;
+					border-radius: 7px;
+					margin-right: 5px;
+					&:hover{
+
+					}
+				}
+				&.first a{
+
+				}
+				&.last a{
+
+				}
+				&.current a{
+					background-color:@orange;
+				}
+			}
+		}
+	}
+}
+
+.attachment .row{
+	padding-bottom:20px;
+}
+.views-grid{
+	.clearfix;
+	.row {
+		@media (min-width: 768px) {
+			padding-bottom:20px;
+		}
+	}
+	.item{
+		@media (max-width: 767px) { 
+			padding-bottom:20px;
+		}
+	}
+}
+.views-row{
+	.clearfix;
+}
+
+@import "non-standard.less";

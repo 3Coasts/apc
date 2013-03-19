@@ -1,0 +1,17 @@
+name = apc
+description = Bootstrap subtheme
+version = 0.1
+core = 7.x
+base theme = bootstrap
+
+regions[header] = Header
+regions[help] = Help
+regions[content] = Content
+regions[footer_one] = Footer One
+regions[footer_two] = Footer Two
+regions[footer_three] = Footer Three
+regions[footer_bottom] = Footer Bottom
+
+stylesheets[all][] = less/stylesheet.css.less
+
+scripts[] = js/apc.js
